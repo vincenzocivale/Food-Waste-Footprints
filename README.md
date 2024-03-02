@@ -2,6 +2,8 @@
 
 This project aims to uncover the contributions of different countries to the global issue of food waste. The project uses data provided by the Food and Agriculture Organization (FAO), a specialized agency of the United Nations, to analyze and visualize various aspects of food waste.
 
+The result of the analysis can be found [here](https://github.com/vincenzocivale/Food-Waste-Footprints/blob/main/Food%20Waste%20Footprints.pdf)
+
 ## Overview
 
 The project focuses on the following key areas:
