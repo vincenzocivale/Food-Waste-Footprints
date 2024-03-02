@@ -1,0 +1,34 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+# Carica i dati dal file CSV in un DataFrame
+df = pd.read_csv(r"C:\Users\cical\Desktop\Università\Start2Impact\Data_science\Progetto_SQL\Results\commodity_top_10.csv")
+
+# Creazione di una lista di colori diversi
+num_bars = len(df)
+colors = plt.cm.viridis(np.linspace(0, 1, num_bars))  # Esempio di mappa di colori viridis
+
+# Creazione del grafico a barre con colori diversi
+bars = plt.bar(df['commodity'], df['food_count'], color=colors)
+
+# Imposta etichette degli assi e titolo
+plt.xlabel('Food')
+plt.ylabel('Count')
+plt.title('5 Most Wasted Food in 2021')
+
+# Aggiungi una legenda con i nomi delle commodity
+plt.legend(bars, df['commodity'])
+
+# Ruota le etichette sull'asse x per migliorare la leggibilità
+plt.xticks(rotation=45)
+
+# Imposta il colore di sfondo trasparente
+fig = plt.gcf()
+fig.patch.set_facecolor('none')
+ax = plt.gca()
+ax.set_facecolor('none')
+
+# Mostra il grafico
+plt.tight_layout()
+plt.show()
